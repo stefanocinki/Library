@@ -27,9 +27,9 @@ public class LibraryConveyApplication extends Application<LibraryConveyConfigura
     @Override
     public void run(final LibraryConveyConfiguration configuration,
             final Environment environment) throws ClassNotFoundException {
-       final DBIFactory factory = new DBIFactory();
-       final DBI jdbi = factory.build(environment, configuration.getDataSourceFactory(), "postgresql");
-       final BookDAO bookDAO = jdbi.onDemand(BookDAO.class); 
+        final DBIFactory factory = new DBIFactory();
+        final DBI jdbi = factory.build(environment, configuration.getDataSourceFactory(), "postgresql");
+        final BookDAO bookDAO = jdbi.onDemand(BookDAO.class);
 
         environment.jersey().register(new BookResource(bookDAO));
     }

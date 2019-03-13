@@ -18,7 +18,7 @@ import org.skife.jdbi.v2.StatementContext;
 import org.skife.jdbi.v2.tweak.ResultSetMapper;
 
 /**
- *
+ * Mapper for ResultSet to class Book
  * @author Stefan
  */
 public class BookMapper implements ResultSetMapper<Book> {
